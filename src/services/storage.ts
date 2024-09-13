@@ -2,11 +2,11 @@ export class Storage {
   private static instance: Storage;
 
   private constructor() {}
-  save(key: string, data: any) {
+  save(key: string, data: unknown) {
     localStorage.setItem(key, JSON.stringify(data));
   }
 
-  get(key: string): any {
+  get(key: string): unknown {
     return JSON.parse(localStorage.getItem(key) || '[]');
   }
 
