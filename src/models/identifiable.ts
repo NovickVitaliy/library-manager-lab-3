@@ -1,5 +1,5 @@
 export interface Identifiable<T> {
-    readonly id: T;
+  readonly id: T;
 
-    getId(): T;
+  getId(): T;
 }
