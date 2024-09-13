@@ -53,7 +53,8 @@ export class UserService implements Paginatable<IUser> {
   }
 
   private loadFromStorage() {
-    const users = this.storage.get(this.usersKey);
+    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
+    const users = <any>this.storage.get(this.usersKey);
 
     for (const user of users) {
       const newUser = new User();
