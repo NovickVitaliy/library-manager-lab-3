@@ -1,3 +1,3 @@
 export interface Representable {
-    represent(): string;
+  represent(): string;
 }
