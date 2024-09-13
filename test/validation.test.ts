@@ -68,7 +68,10 @@ describe('Create User Request Validation', () => {
   context('When user provides empty username', () => {
     it('Should return false', () => {
       const validation = Validation.getInstance();
-      let validationResult = validation.validateCreateUserRequest('', 'some@email.com');
+      const validationResult = validation.validateCreateUserRequest(
+        '',
+        'some@email.com'
+      );
       assert.equal(validationResult, false);
     });
   });
@@ -76,7 +79,7 @@ describe('Create User Request Validation', () => {
   context('When user provides empty email', () => {
     it('Should return false', () => {
       const validation = Validation.getInstance();
-      let validationResult = validation.validateCreateUserRequest('123', '');
+      const validationResult = validation.validateCreateUserRequest('123', '');
       assert.equal(validationResult, false);
     });
   });
@@ -84,7 +87,10 @@ describe('Create User Request Validation', () => {
   context('When user provides invalid email', () => {
     it('Should return false', () => {
       const validation = Validation.getInstance();
-      let validationResult = validation.validateCreateUserRequest('', 'notemail');
+      const validationResult = validation.validateCreateUserRequest(
+        '',
+        'notemail'
+      );
       assert.equal(validationResult, false);
     });
   });
@@ -92,7 +98,10 @@ describe('Create User Request Validation', () => {
   context('When user provides valid data', () => {
     it('Should return true', () => {
       const validation = Validation.getInstance();
-      let validationResult = validation.validateCreateUserRequest('username', 'some@email.com');
+      const validationResult = validation.validateCreateUserRequest(
+        'username',
+        'some@email.com'
+      );
       assert.equal(validationResult, true);
     });
   });

@@ -8,7 +8,9 @@
     "build": "webpack --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "test": "mocha --require ts-node/register --recursive test/**/*.ts"
+    "test": "mocha --require ts-node/register --recursive test/**/*.ts",
+    "prepare": "husky",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
+    "husky": "^9.1.6",
     "mocha": "^10.7.3",
     "prettier": "3.3.3",
     "sass": "^1.78.0",

@@ -127,7 +127,8 @@ export class LibraryService implements Paginatable<Representable> {
   }
 
   private loadFromStorage() {
-    const books = this.storageService.get(this.booksKey) ?? [];
+    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
+    const books = <any>this.storageService.get(this.booksKey) ?? [];
     for (const book of books) {
       const newBook = new Book();
       newBook.id = book.id;
