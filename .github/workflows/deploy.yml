@@ -1,0 +1,13 @@
+name: Deploy Action
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build webpack
+        run: npm run build
+      - name: Run tests
+        run: npm run test
+      - name: Run linter
+        run: npm run lint

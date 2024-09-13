@@ -9,7 +9,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "test": "mocha --require ts-node/register --recursive test/**/*.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
