@@ -1,4 +1,3 @@
-import { Identifiable } from '../models/identifiable';
 import { Representable } from '../models/representable';
 
 export interface Paginatable<TEntity extends Representable> {
