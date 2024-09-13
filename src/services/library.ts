@@ -32,6 +32,7 @@ export class Library<TItem extends Identifiable<TId> & Representable, TId>
   }
 
   getAll(): Array<TItem> {
+    console.log(this.items);
     return this.items;
   }
 
